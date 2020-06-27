@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="index.css">
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#" type="text"> < Back To Home </a>
+    </div>
+    <div class="container">
+      <div class="litleContainer">
+        <div class="logo">
+          <p>Free <span>Wire</span></p>
+        </div>
+        <div class="LoginOrSignUp">
+          <span class="spanLogin" id="spanLogin"><p class="login" id="login">login</p></span>
+          <span class="spanSignUp" id="spanSignUp"><p class="signUp" id="signUp">sign up</p></span>
+        </div>
+        <section id="loginSection">
+            <form class="form-login" action="#" method="post">
+              <span class="spanInput">
+                <input type="text" name="EmailLogin" placeholder="Email" class="input">
+              </span>
+              <span class="spanInput">
+                <input type="password" name="PasswordLogin" placeholder="Password" class="input">
+              </span>
+              <span class="spanInput">
+                <input type="submit" name="SubmitLogin" value="LOGIN" class="submit input">
+              </span>
+            </form>
+            <span class="spanInput">
+              <a href="#" style="margin-top:1%;">Forgot Password ?</a>
+            </span>
+          </section>
+          <section id="signUpSection">
+              <form class="form-login" action="#" method="post">
+                <span class="spanInput">
+                  <input type="text" name="EmailSignUp" placeholder="Email" class="input">
+                </span>
+                <span class="spanInput">
+                  <input type="password" name="PasswordSignUp" placeholder="Password" class="input">
+                </span>
+                <span class="spanInput">
+                  <input type="password" name="PasswordSignUp" placeholder="Confirm Password" class="input">
+                </span>
+                <span class="spanInput">
+                  <input type="submit" name="SubmitSignUp" value="SIGN UP" class="submit input">
+                </span>
+                <span class="spanInput">
+                  <input type="checkbox" name="checkbox" style="margin-right:3%; margin-top:3%;">
+                  <label for="checkbox">I agree to the terms & conditions</label>
+                </span>
+              </form>
+            </section>
+          <div class="ou">
+            <hr/>
+            <p>Or</p>
+            <hr/>
+          </div>
+          <div class="reseaux">
+            <button type="link" name="facebook" onclick="location.href='https://www.facebook.com';"><i class="fab fa-facebook-f fa-2x"></i></button>
+            <button type="button" name="google"  onclick="location.href='https://google.com';"><i class="fab fa-google fa-2x"></i></button>
+          </div>
+        </div>
+    </div>
+
+  <script type="text/javascript">
+    var signUp = document.getElementById('signUp');
+      signUp.onclick = function() {
+        document.getElementById("login").style.color = "#73A1C2";
+        document.getElementById("login").style.fontWeight = "400";
+        document.getElementById("spanLogin").style.borderBottom = "none";
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("signUpSection").style.display = "flex";
+        document.getElementById("signUp").style.color = "#186AA5";
+        document.getElementById("signUp").style.fontWeight = "600";
+        document.getElementById("spanSignUp").style.borderBottom = "solid 2px #186AA5";
+      };
+
+      var signUp = document.getElementById('login');
+        signUp.onclick = function() {
+          document.getElementById("signUp").style.color = "#73A1C2";
+          document.getElementById("signUp").style.fontWeight = "400";
+          document.getElementById("spanSignUp").style.borderBottom = "none";
+          document.getElementById("signUpSection").style.display = "none";
+          document.getElementById("loginSection").style.display = "flex";
+          document.getElementById("login").style.color = "#186AA5";
+          document.getElementById("login").style.fontWeight = "600";
+          document.getElementById("spanLogin").style.borderBottom = "solid 2px #186AA5";
+        };
+  </script>
+
+  </body>
+</html>
